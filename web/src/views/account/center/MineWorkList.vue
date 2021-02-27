@@ -191,6 +191,12 @@ export default {
         case '3':
           return window.open('/scratchjr/editor.html?mode=edit&filepath=' + record.workFileUrl)
           break;
+        case '4':
+          return window.open('/python/index.html?lang=turtle&workId=' + record.id)
+          break
+        case '5':
+          return window.open('/python/index.html?lang=python&workId=' + record.id)
+          break
         default:
           return window.open(record.workFileUrl)
       }

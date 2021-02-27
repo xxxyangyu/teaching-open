@@ -51,7 +51,7 @@ window.getQiniuToken = function() {
   $.ajax({
     url: '/api/common/qiniu/getToken',
     beforeSend: function(request) {
-      request.setRequestHeader('X-Access-Token', getUserToken())
+      request.setRequestHeader('X-Access-Token', $.cookie('ACCESS_TOKEN'))
     },
     async: false,
     success: function(res) {
@@ -65,7 +65,7 @@ window.getQiniuToken = function() {
     error: function(e) {
       if (e.responseJSON.status == 500) {
         //alert(e.responseJSON.message);
-        // location.href = '/'
+        location.href = '/'
       }
       console.log(e)
     }

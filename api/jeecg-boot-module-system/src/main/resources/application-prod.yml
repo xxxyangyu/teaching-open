@@ -169,7 +169,7 @@ mybatis-plus:
 #jeecg专用配置
 jeecg :
   # 站点域名
-  domain: http://open.teaching.vip
+  domain: http://newai.com.au
   # 本地：local\Minio：minio\阿里云：alioss
   uploadType: local
   path :
@@ -192,10 +192,10 @@ jeecg :
     staticDomain: ??
   #七牛云存储配置
   qiniu:
-    accessKey: ??
-    secretKey: ??
-    bucketName: teaching-open
-    staticDomain: //qn.open.teaching.vip
+    accessKey: T2NnvRt-IOOpxKjD8WuaSR4h1BoaL_egT-Diu88L
+    secretKey: EYJ35uZsYCd3ioABblLeYHYldDgaD00vP5pNbIb2
+    bucketName: newai
+    staticDomain: //cdn.newai.com.au
 
   # ElasticSearch 设置
   elasticsearch:

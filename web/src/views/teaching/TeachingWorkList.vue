@@ -21,8 +21,8 @@
               </a-form-item>
             </a-col>
             <a-col :xl="6" :lg="7" :md="8" :sm="24">
-              <a-form-item label="作业类型">
-                <j-dict-select-tag placeholder="请选择作业类型" v-model="queryParam.workType" dictCode="work_type"/>
+              <a-form-item label="代码类型">
+                <j-dict-select-tag placeholder="请选择代码类型" v-model="queryParam.workType" dictCode="code_type"/>
               </a-form-item>
             </a-col>
           </template>
@@ -189,7 +189,7 @@
             dataIndex: 'workName'
           },
           {
-            title:'作业类型',
+            title:'代码类型',
             align:"center",
             dataIndex: 'workType_dictText'
           },
@@ -272,6 +272,12 @@
           case '3':
             return window.open('/scratchjr/editor.html?mode=edit&filepath=' + record.workFileUrl)
             break;
+          case '4':
+            return window.open('/python/index.html?lang=turtle&workId='+record.id)
+            break
+          case '5':
+            return window.open('/python/index.html?lang=python&workId='+record.id)
+            break
           default:
             return window.open(record.workFileUrl)
         }
